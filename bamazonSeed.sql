@@ -20,4 +20,4 @@ INSERT INTO products (product_name, department_name, price, stock_quantity) valu
 INSERT INTO products (product_name, department_name, price, stock_quantity) values ('Mechanical Keyboard', 'Tech', 90, 1);
 INSERT INTO products (product_name, department_name, price, stock_quantity) values ('Coffee Mug', 'Kitchen', 10, 8);
 INSERT INTO products (product_name, department_name, price, stock_quantity) values ('Breaking Bad DVD Series', 'Entertainment', 50, 1);
-INSERT INTO products (product_name, department_name, price, stock_quantity) values ('Mean Girls DVD', 'Entertainment', 29, 1); 
+INSERT INTO products (product_name, department_name, price, stock_quantity) values ('Mean Girls DVD', 'Entertainment', 29, 1);
