@@ -2,6 +2,7 @@
 var inquirer = require("inquirer");
 var mysql = require("mysql");
 var emoji = require("node-emoji");
+var figlet = require("figlet");
 //CONNECTION TO SQL DB
 var connection = mysql.createConnection({
   host: "127.0.0.1",
@@ -34,6 +35,7 @@ function displayProducts(){
 
 //startOrder function creation
 function startOrder(){
+  ///prompt user for id they want and how many of each
   inquirer.prompt([{
     name: "id",
     type: "input",
@@ -43,10 +45,11 @@ function startOrder(){
     type: "input",
     message: "How many do you want to buy? "
   }]).then(function(ans){
+    //select the id that user put in from database and check stock
     connection.query('SELECT * FROM products WHERE ?', {item_id: ans.id}, function(err, res){
 
       if (err) throw err;
-
+//declare varialbles that take values from sqldb
       var orderQty = ans.quantity;
       var product = res[0].product_name;
       var priceofItem = res[0].price;
